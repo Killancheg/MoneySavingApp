@@ -1,10 +1,12 @@
 ﻿namespace WhatIsMyBalance.Shared.Models;
 
-public class ExpenseCategory
+public class BalanceChangeCategory
 {
     public int Id { get; set; }
     
     public string Name { get; set; }
+    
+    public bool IsIncome { get; set; }
     
     public int IconId { get; set; }
     

@@ -9,6 +9,6 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-builder.Services.AddScoped<IIncomeService, IncomeService>();
+builder.Services.AddScoped<IBalanceChangeService, BalanceChangeService>();
 
 await builder.Build().RunAsync();

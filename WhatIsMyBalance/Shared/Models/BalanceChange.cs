@@ -1,9 +1,12 @@
-﻿namespace WhatIsMyBalance.Shared.Models;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
-public class Expense
+namespace WhatIsMyBalance.Shared.Models;
+
+public class BalanceChange
 {
     public int Id { get; set; }
 
+    [Column(TypeName = "decimal(18,2)")]
     public decimal Amount { get; set; }
     
     public string Description { get; set; }
@@ -12,7 +15,7 @@ public class Expense
     
     public int WalletId { get; set; }
     
-    public ExpenseCategory Category { get; set; }
+    public BalanceChangeCategory Category { get; set; }
     
     public int CategoryId { get; set; }
 

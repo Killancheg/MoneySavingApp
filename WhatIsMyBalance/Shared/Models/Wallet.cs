@@ -1,12 +1,18 @@
-﻿namespace WhatIsMyBalance.Shared.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace WhatIsMyBalance.Shared.Models;
 
 public class Wallet
 {
-    private int Id { get; set; }
+    public int Id { get; set; }
     
-    private decimal TotalCredits { get; set; }
+    [Column(TypeName = "decimal(18,2)")]
+    public decimal TotalCredits { get; set; }
     
-    private string CurrencyType { get; set; }
+    public string CurrencyType { get; set; }
+    
+    public IEnumerable<BalanceChange> BalanceChanges { get; set; }
 
-    private int UserId { get; set; }
+    public int UserId { get; set; }
 }
