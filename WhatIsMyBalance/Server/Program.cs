@@ -1,21 +1,17 @@
-using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
-using WhatIsMyBalance.Server.Data;
-using WhatIsMyBalance.Server.Services;
+using WhatIsMyBalance.DataAccess;
+using WhatIsMyBalance.Server.Mappers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddDbContext<DataContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
+builder.Services.AddDbServices(builder.Configuration.GetConnectionString("DefaultConnection"));
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
-builder.Services.AddScoped<IBalanceChangeServerService, BalanceChangeServerService>();
+builder.Services.AddMappers();
 
 var app = builder.Build();
 

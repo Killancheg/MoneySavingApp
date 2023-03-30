@@ -7,7 +7,6 @@ public class Wallet
 {
     public int Id { get; set; }
     
-    [Column(TypeName = "decimal(18,2)")]
     public decimal TotalCredits { get; set; }
     
     public string CurrencyType { get; set; }

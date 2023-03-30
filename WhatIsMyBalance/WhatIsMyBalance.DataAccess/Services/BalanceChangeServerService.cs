@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WhatIsMyBalance.Server.Data;
-using WhatIsMyBalance.Shared.Models;
+using WhatIsMyBalance.DataAccess.ModelsDA;
 
-namespace WhatIsMyBalance.Server.Services;
+namespace WhatIsMyBalance.DataAccess.Services;
 
 public class BalanceChangeServerService : IBalanceChangeServerService
 {
@@ -13,7 +12,7 @@ public class BalanceChangeServerService : IBalanceChangeServerService
         _context = context;
     }
 
-    public async Task<IEnumerable<BalanceChange>> GetWalletsIncomeAsync(int walletId)
+    public async Task<IEnumerable<BalanceChangeDto>> GetWalletsIncomeAsync(int walletId)
     {
         return await _context.BalanceChanges.Where(change => change.WalletId == walletId).ToListAsync();
     }

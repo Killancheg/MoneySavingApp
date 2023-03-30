@@ -12,8 +12,8 @@ public class BalanceChangeService : IBalanceChangeService
         _http = http;
     }
 
-    public async Task<IEnumerable<BalanceChange>?> GetWalletsIncomeAsync(int walletId)
+    public async Task<IEnumerable<BalanceChange>?> GetWalletsBalanceChangesAsync(int walletId)
     {
-        return await _http.GetFromJsonAsync<IEnumerable<BalanceChange>>($"api/Income/Wallet/{walletId}");
+        return await _http.GetFromJsonAsync<IEnumerable<BalanceChange>>($"api/BalanceChange/Wallet/{walletId}");
     }
 }

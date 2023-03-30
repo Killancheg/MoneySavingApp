@@ -1,6 +1,6 @@
 ﻿namespace WhatIsMyBalance.Shared.Models;
 
-public class BalanceChangeCategory
+public class Category
 {
     public int Id { get; set; }
     

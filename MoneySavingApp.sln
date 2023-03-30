@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatIsMyBalance.Client", "W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatIsMyBalance.Shared", "WhatIsMyBalance\Shared\WhatIsMyBalance.Shared.csproj", "{124C5721-1D7E-4FF0-B3EE-8F26A61D8136}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatIsMyBalance.DataAccess", "WhatIsMyBalance\WhatIsMyBalance.DataAccess\WhatIsMyBalance.DataAccess.csproj", "{15DEDEBE-7ACC-4F82-AF9E-3A1544DEC072}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{124C5721-1D7E-4FF0-B3EE-8F26A61D8136}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{124C5721-1D7E-4FF0-B3EE-8F26A61D8136}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{124C5721-1D7E-4FF0-B3EE-8F26A61D8136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15DEDEBE-7ACC-4F82-AF9E-3A1544DEC072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15DEDEBE-7ACC-4F82-AF9E-3A1544DEC072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15DEDEBE-7ACC-4F82-AF9E-3A1544DEC072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15DEDEBE-7ACC-4F82-AF9E-3A1544DEC072}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

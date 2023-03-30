@@ -4,5 +4,5 @@ namespace WhatIsMyBalance.Client.Services;
 
 public interface IBalanceChangeService
 {
-    Task<IEnumerable<BalanceChange>?> GetWalletsIncomeAsync(int walletId);
+    Task<IEnumerable<BalanceChange>?> GetWalletsBalanceChangesAsync(int walletId);
 }
