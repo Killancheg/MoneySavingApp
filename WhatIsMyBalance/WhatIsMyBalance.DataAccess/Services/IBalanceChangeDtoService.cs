@@ -2,7 +2,7 @@
 
 namespace WhatIsMyBalance.DataAccess.Services;
 
-public interface IBalanceChangeServerService
+public interface IBalanceChangeDtoService : IBaseModelService<BalanceChangeDto>
 {
     Task<IEnumerable<BalanceChangeDto>> GetWalletsIncomeAsync(int walletId);
 }

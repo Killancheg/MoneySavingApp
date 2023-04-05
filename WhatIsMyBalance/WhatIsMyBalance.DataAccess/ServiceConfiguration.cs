@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using WhatIsMyBalance.DataAccess.Services;
 
 namespace WhatIsMyBalance.DataAccess;
 
@@ -11,6 +12,10 @@ public static class ServiceConfiguration
         {
             options.UseSqlServer(connectionString);
         });
+
+        services.AddScoped<IBalanceChangeDtoService, BalanceChangeDtoService>();
+        services.AddScoped<ICategoryDtoService, CategoryDtoService>();
+        services.AddScoped<IWalletDtoService, WalletDtoService>();
     }
 
 }

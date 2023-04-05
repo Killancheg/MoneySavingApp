@@ -7,9 +7,9 @@ namespace WhatIsMyBalance.DataAccess.Services
     {
         private readonly DbContext _context;
 
-        private DbSet<T> Entities => _context.Set<T>();
+        protected DbSet<T> Entities => _context.Set<T>();
     
-        public BaseModelService(DbContext context)
+        protected BaseModelService(DbContext context)
         {
             _context = context;
         }
