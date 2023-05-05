@@ -1,9 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WhatIsMyBalance.DataAccess.ModelsDA;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using WhatIsMyBalance.DataAccess.ModelsIdentity;
 
 namespace WhatIsMyBalance.DataAccess;
 
-public class DataContext : DbContext
+public class DataContext : IdentityDbContext<ApplicationUser>
 {
     public DataContext(DbContextOptions<DataContext> options) : base(options)
     {

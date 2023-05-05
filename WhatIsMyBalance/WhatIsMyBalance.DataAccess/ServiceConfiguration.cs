@@ -14,8 +14,6 @@ public static class ServiceConfiguration
         });
 
         services.AddScoped<IBalanceChangeDtoService, BalanceChangeDtoService>();
-        services.AddScoped<ICategoryDtoService, CategoryDtoService>();
-        services.AddScoped<IWalletDtoService, WalletDtoService>();
     }
 
 }
