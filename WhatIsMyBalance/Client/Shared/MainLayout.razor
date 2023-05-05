@@ -23,15 +23,15 @@
     [CascadingParameter]
     Task<AuthenticationState> AuthenticationState { get; set; }
     
-    /*protected override async Task OnParametersSetAsync()
+    protected override async Task OnParametersSetAsync()
     {
         var userIdentity = (await AuthenticationState).User.Identity;
         
-        if (userIdentity != null && !userIdentity.IsAuthenticated)
+        if (userIdentity is {IsAuthenticated: false })
         {
             navigationManager.NavigateTo("/login");
         }
-    }*/
+    }
     
     async Task LogoutClick()
     {

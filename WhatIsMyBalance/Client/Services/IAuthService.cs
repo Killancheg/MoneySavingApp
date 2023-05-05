@@ -7,5 +7,5 @@ public interface IAuthService
     Task LoginAsync(LoginRequest loginRequest);
     Task RegisterAsync(RegisterRequest registerRequest);
     Task LogoutAsync();
-    Task<CurrentUser> CurrentUserInfo();
+    Task<CurrentUser> CurrentUserInfoAsync();
 }

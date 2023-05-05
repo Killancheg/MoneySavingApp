@@ -12,15 +12,15 @@ public class AuthService : IAuthService
         _httpClient = httpClient;
     }
     
-    public async Task<CurrentUser> CurrentUserInfo()
+    public async Task<CurrentUser> CurrentUserInfoAsync()
     {
-        var result = await _httpClient.GetFromJsonAsync<CurrentUser>("api/auth/currentuserinfo");
+        var result = await _httpClient.GetFromJsonAsync<CurrentUser>("api/Auth/CurrentUserInfo");
         return result;
     }
     
     public async Task LoginAsync(LoginRequest loginRequest)
     {
-        var result = await _httpClient.PostAsJsonAsync("api/auth/login", loginRequest);
+        var result = await _httpClient.PostAsJsonAsync("api/Auth/Login", loginRequest);
         
         if (result.StatusCode == System.Net.HttpStatusCode.BadRequest)
         {
@@ -32,14 +32,14 @@ public class AuthService : IAuthService
     
     public async Task LogoutAsync()
     {
-        var result = await _httpClient.PostAsync("api/auth/logout", null);
+        var result = await _httpClient.PostAsync("api/Auth/Logout", null);
         
         result.EnsureSuccessStatusCode();
     }
     
     public async Task RegisterAsync(RegisterRequest registerRequest)
     {
-        var result = await _httpClient.PostAsJsonAsync("api/auth/register", registerRequest);
+        var result = await _httpClient.PostAsJsonAsync("api/auth/Register", registerRequest);
         
         if (result.StatusCode == System.Net.HttpStatusCode.BadRequest)
         {

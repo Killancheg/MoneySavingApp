@@ -46,7 +46,7 @@ public class CustomStateProvider : AuthenticationStateProvider
             return _currentUser;
         }
         
-        _currentUser = await _api.CurrentUserInfo();
+        _currentUser = await _api.CurrentUserInfoAsync();
         return _currentUser;
     }
     

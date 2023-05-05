@@ -8,7 +8,7 @@ public partial class Register
 {
     private string _error;
     
-    private RegisterRequest RegisterRequest { get; set; }
+    private RegisterRequest RegisterRequest { get; set; } = new RegisterRequest();
     
     [Inject] 
     private NavigationManager NavManager { get; set; }
